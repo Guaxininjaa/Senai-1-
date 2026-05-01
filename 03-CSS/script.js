@@ -1,20 +1,34 @@
+
+
+
+
 // -----------------------------MARUJOS---------------------------------------
-function verificarProvisoes(){                              // Cria um bloco de código (função) chamado 'verificarProvisoes'
-// infos:
-    let marujos, comida                                   // Declara variáveis (espaços na memória) para a quantidade de marujos e comida
-    let comidaPorMarujo                                  // Declara a variável que vai guardar o resultado da divisão
-    // entradas
-    marujos = Number(prompt("Quantidade de marujos: "))// Pede o nº de marujos na tela, converte o texto para Número e guarda na variável
-    comida = Number(prompt("Quilos de comida: "))     // Pede os kg de comida na tela, converte para Número e guarda
-    // processamentos
-    comidaPorMarujo = comida / marujos              // Divide a comida pelo total de marujos e guarda o resultado
-    if(marujos >= 10 && comidaPorMarujo >= 1.5){   // SE (if) tiver 10 ou mais marujos E (&&) a comida por pessoa for 1.5 ou mais:
+function verificarProvisoes(){                              
+    // Cria um bloco de código (função) chamado 'verificarProvisoes'
+
+    let marujos, comida                                   
+    // Declara variáveis (espaços na memória) para a quantidade de marujos e comida
+    let comidaPorMarujo                                  
+    // Declara a variável que vai guardar o resultado da divisão
+    
+    marujos = Number(prompt("Quantidade de marujos: "))
+    // Pede o nº de marujos na tela, converte o texto para Número e guarda na variável
+    comida = Number(prompt("Quilos de comida: "))     
+    // Pede os kg de comida na tela, converte para Número e guarda
+   
+    comidaPorMarujo = comida / marujos              
+    // Divide a comida pelo total de marujos e guarda o resultado
+    if(marujos >= 10 && comidaPorMarujo >= 1.5){   
+    // SE (if) tiver 10 ou mais marujos E (&&) a comida por pessoa for 1.5 ou mais:
         
-        document.getElementById("resultadoProvisoes").innerHTML = "Provisões suficientes. Rumo ao horizonte!" // Busca o ID no HTML e injeta essa mensagem de sucesso
+    document.getElementById("resultadoProvisoes").innerHTML = "Provisões suficientes. Rumo ao horizonte!" 
+    // Busca o ID no HTML e injeta essa mensagem de sucesso
     }
-// se nao
+
     else{   // SENÃO (else), caso a regra do 'if' não seja cumprida:
-        document.getElementById("resultadoProvisoes").innerHTML = "Algo esta errado"  // Busca o ID no HTML e injeta essa mensagem de erro
+        document.getElementById("resultadoProvisoes").innerHTML = "Algo esta errado"  
+        // document.write("Algo esta errado"  )
+        // Busca o ID no HTML e injeta essa mensagem de erro
     }
 }
 

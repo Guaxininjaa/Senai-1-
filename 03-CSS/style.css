@@ -1,6 +1,14 @@
-body { background-color: hsla(29, 80%, 46%, 0.637);}
 
-button {
+
+body { background-color: hsl(0, 58%, 61%);}
+/* Seleciona o corpo inteiro da sua página HTML (o fundo geral do site) */
+/* Define a cor de fundo como preto absoluto (HSL: 0 Matiz, 0% Saturação, 0% Luz) */
+/* Fecha as regras de estilo do corpo da página */
+
+
+button{
+ /* Seleciona todos os elementos <button> do seu HTML para mudar o visual deles */
+/* Fecha o bloco de regras do botão */ 
     background-color: rgb(48, 49, 105); 
     /* Define a cor de fundo (azul escuro) */
     color: rgb(8, 248, 0);             
@@ -15,6 +23,7 @@ button {
     /* Espaço externo (distância para os outros elementos) */
 }
 
+
 hr {
     border: none;                         
     /* Remove a borda 3D padrão */
@@ -23,5 +32,6 @@ hr {
     background-color: rgb(25, 43, 210);
     /* Escolha a cor que quiser aqui! */
 }
+
 
 
