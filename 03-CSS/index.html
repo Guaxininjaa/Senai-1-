@@ -1,32 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CSS</title>
-</head>
-<body>
+<!DOCTYPE html>                                                 <!-- Define que este é um documento HTML5 moderno -->
+<html lang="en">                                                <!-- Abre a tag principal do site e define o idioma -->
+<head>                                                          <!-- Cabeçalho: configurações invisíveis para o usuário -->
+    <meta charset="UTF-8">                                      <!-- Permite o uso de acentuação e caracteres especiais (ex: ç, ã) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o tamanho da tela para celulares -->
+    <link rel="stylesheet" href="style.css">                    <!-- Conecta a página ao seu arquivo de design/estilos (CSS) -->
+    <title>CSS</title>                                          <!-- Define o título que aparece lá na aba do navegador -->
+</head>                                                         <!-- Fecha a sessão do cabeçalho -->
+<body>                                                          <!-- Corpo: tudo o que é visível na tela vai aqui dentro -->
     
-    <h1>Spoilers de CSS e outras <coisas class=""></coisas></h1>
-<h2>teste</h2>
-<hr>
-<!-- ----------------------------------------------------------- -->
+    <h1>Spoilers de CSS e outras <coisas class=""></coisas></h1> <!-- Título principal (H1) da sua página -->
 
-<!-- <button onclick="calcularPrecoBrique()">ROMERO BRIQUE</button>
-<br>
-<button onclick="calcularDaMonika()">Monika</button>
-<output id="resultado">Resultado vai aparecer aqui</output> -->
+    <h2>teste</h2>                                              <!-- Subtítulo (H2), com fonte um pouco menor que o H1 -->
 
-<button onclick="calcularPrecoBrique()">ROMERO BRIQUE</button>
-<br>
-<output id="resultadoBrique">Resultado </output>
-<br><br>
+    <hr>                                                        <!-- <hr> <===== linha ===== Cria uma linha horizontal -->
 
-<button onclick="calcularDaMonika()">Monika</button>
-<br>
-<output id="resultadoMonika">Resultado </output>
-<script src="script.js"></script>
-<hr>
-</body>
-</html>
+
+
+<button onclick="calcularPrecoBrique()">ROMERO BRIQUE</button>  <!-- Botão que, ao ser clicado, executa a função do Brique no JS -->
+<output id="resultadoBrique">Resultado </output>                <!-- Espaço (output) onde o JS vai injetar o resultado do Brique -->
+
+
+<br><hr>                                                        <!-- <br> quebra a linha para baixo e <hr> cria outra linha divisória -->
+<button onclick="verificarProvisoes()">Capitão Ganso</button>   <!-- Botão que aciona a função dos marujos/provisões -->
+<output id="resultadoProvisoes">Resultado </output>             <!-- Espaço onde vai aparecer se as provisões são suficientes -->
+
+
+<br>                                                            <!-- Quebra a linha novamente para não colar no elemento de cima -->
+<hr><button onclick="calcularDaMonika()">Monika</button>        <!-- Linha horizontal e botão que aciona o cálculo de chance -->
+<output id="resultadoMonika">Resultado </output><hr>            <!-- Espaço para o resultado da Monika, seguido de outra linha -->
+
+
+<script src="script.js"></script>                               <!-- Carrega o seu arquivo de lógica JavaScript (script.js) -->
+
+
+</body>                                                         <!-- Fecha o corpo da página -->
+</html>                                                         <!-- Fecha a estrutura do documento HTML -->
