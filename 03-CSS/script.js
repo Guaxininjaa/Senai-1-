@@ -21,30 +21,48 @@ function verificarProvisoes(){                              // Cria um bloco de 
 
 // -----------------------------BRIQUE------------------------------------------
 
-function calcularPrecoBrique(){                 // Cria a função 'calcularPrecoBrique'
-   alert("Função executada")                   // Dispara um pop-up na tela avisando que a função começou
-    // INFOS 
-    let custo, venda                         // Declara as variáveis que vão guardar os valores de custo e venda
+function calcularPrecoBrique(){                 
+    // Cria a função 'calcularPrecoBrique'
+   alert("Função executada")                  
+    // Dispara um pop-up na tela avisando que a função começou
+    
+    let custo, venda                         
+    // Declara as variáveis que vão guardar os valores de custo e venda
 
- custo = Number (prompt("Custo: "))        // Pede o valor do custo ao usuário, converte para Número e guarda
- venda = custo * 3                        // Calcula a venda multiplicando o custo recebido por 3
+ custo = Number (prompt("Custo: "))        
+ // Pede o valor do custo ao usuário, converte para Número e guarda
 
- alert("O valor é: " + venda.toFixed(2))// Mostra um pop-up com o valor calculado, fixando 2 casas decimais
+ venda = custo * 3                        
+ // Calcula a venda multiplicando o custo recebido por 3
 
- document.getElementById("resultadoBrique").innerHTML = "Valor: R$" + venda.toFixed(4) // Escreve o resultado no HTML, agora com 4 casas decimais
+ alert("O valor é: " + venda.toFixed(2))
+ // Mostra um pop-up com o valor calculado, fixando 2 casas decimais
+
+ document.getElementById("resultadoBrique").innerHTML = "Valor: R$" + venda.toFixed(4) 
+ // Escreve o resultado no HTML, agora com 4 casas decimais
  }
 
 
 // -----------------------------MONIKA------------------------------------------
 
- function calcularDaMonika(){                                      // Cria a função 'calcularDaMonika'
+function calcularDaMonika(){                                     
+// Cria a função 'calcularDaMonika'
 
-    let chance, n                                                // Declara as variáveis 'chance' (resultado) e 'n' (input do usuário)
+let chance, n                                                
+// Declara as variáveis 'chance' (resultado) e 'n' (input do usuário)
 
-n = Number(prompt("Numero de vezes ao celular: "))             // Pede o nº de vezes ao celular, converte para Número e guarda em 'n'
-chance = (0.1/(1+500*n))*100                                  // Executa a fórmula matemática usando o valor de 'n' informado
+n = Number(prompt("Numero de vezes ao celular: "))             
+// Pede o nº de vezes ao celular, converte para Número e guarda em 'n'
 
-alert ("Chance de aprovação: " + chance.toFixed(4) + "%")   // Mostra um pop-up com o resultado da chance, formatado com 4 casas decimais
-// console.log ("Aprovação: " + chance.toFixed(4) + "%")   // Código inativo. Se ativado, imprimiria o resultado no painel oculto do navegador (F12)
-document.getElementById("resultadoMonika").innerHTML = "chance: " + chance.toFixed(4) // Exibe o resultado final no corpo da página HTML
+chance = (0.1/(1+500*n))*100                                
+  // Executa a fórmula matemática usando o valor de 'n' informado
+
+alert ("Chance de aprovação: " + chance.toFixed(4) + "%")   
+// Mostra um pop-up com o resultado da chance, formatado com 4 casas decimais
+
+console.log ("Aprovação: " + chance.toFixed(4) + "%")   
+// Código inativo. Se ativado, imprimiria o resultado no painel oculto do navegador (F12)
+
+document.getElementById("resultadoMonika").innerHTML = "chance: " + chance.toFixed(4) 
+// Exibe o resultado final no corpo da página HTML
 }

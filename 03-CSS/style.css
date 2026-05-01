@@ -1,18 +1,27 @@
 body { background-color: hsla(29, 80%, 46%, 0.637);}
 
 button {
-    background-color: rgb(48, 49, 105); /* Define a cor de fundo (azul escuro) */
-    color: rgb(8, 248, 0);              /* Define a cor do texto (verde neon) */
-    padding: 8px;                         /* Espaço interno (distância do texto até a borda) */
-    border-radius: 8px;                   /* Arredonda os cantos do botão */
-    border: none;                         /* Remove a borda padrão do navegador */
-    margin: 10px;                         /* Espaço externo (distância para os outros elementos) */
+    background-color: rgb(48, 49, 105); 
+    /* Define a cor de fundo (azul escuro) */
+    color: rgb(8, 248, 0);             
+    /* Define a cor do texto (verde neon) */
+    padding: 8px;                       
+    /* Espaço interno (distância do texto até a borda) */
+    border-radius: 8px;                  
+    /* Arredonda os cantos do botão */
+    border: none;                         
+    /* Remove a borda padrão do navegador */
+    margin: 10px;                        
+    /* Espaço externo (distância para os outros elementos) */
 }
 
 hr {
-    border: none;                         /* Remove a borda 3D padrão */
-    height: 2px;                          /* Define a grossura da linha */
-    background-color: rgb(25, 43, 210); /* Escolha a cor que quiser aqui! */
+    border: none;                         
+    /* Remove a borda 3D padrão */
+    height: 2px;                          
+    /* Define a grossura da linha */
+    background-color: rgb(25, 43, 210);
+    /* Escolha a cor que quiser aqui! */
 }
 
 
