@@ -1,0 +1,118 @@
+/* =========================================
+   1. ESTILOS DA PÁGINA DE EXERCÍCIOS (ROSA)
+   ========================================= */
+
+/* Usamos uma classe específica para não deixar todas as páginas rosas */
+.pagina-rosa { 
+    background-color: hsl(0, 58%, 61%);
+    font-family: sans-serif;
+}
+
+/* Estilo dos botões da página de exercícios */
+.pagina-rosa button {
+    background-color: rgb(48, 49, 105); 
+    color: rgb(8, 248, 0);             
+    padding: 8px;                       
+    border-radius: 8px;                  
+    border: none;                         
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Estilo da linha divisória da página de exercícios */
+.pagina-rosa hr {
+    border: none;                         
+    height: 2px;                          
+    background-color: rgb(25, 43, 210);
+}
+
+
+/* =========================================
+   2. ESTILOS EXCLUSIVOS DA PÁGINA HOME (T-REX)
+   ========================================= */
+
+.pagina-home {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; 
+}
+
+.hero-bg {
+    /* IMPORTANTE: Coloque o nome da sua imagem do T-Rex aqui embaixo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('1f042df4-e716-4a8b-8307-6820950a616d.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding: 30px 60px;
+    color: white;
+}
+
+.logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero-content {
+    color: white;
+    padding: 60px; 
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.hero-content h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.container-botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-laranja {
+    background-color: #df691a;
+    color: #ffffff;
+    border: 2px solid #df691a;
+}
+
+.btn-laranja:hover {
+    background-color: #bf5814;
+    border-color: #bf5814;
+}
+
+.btn-transparente {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-transparente:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}

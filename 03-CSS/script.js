@@ -25,7 +25,8 @@ function verificarProvisoes(){
     // Busca o ID no HTML e injeta essa mensagem de sucesso
     }
 
-    else{   // SENÃO (else), caso a regra do 'if' não seja cumprida:
+    else{  
+         // SENÃO (else), caso a regra do 'if' não seja cumprida:
         document.getElementById("resultadoProvisoes").innerHTML = "Algo esta errado"  
         // document.write("Algo esta errado"  )
         // Busca o ID no HTML e injeta essa mensagem de erro
@@ -80,3 +81,42 @@ console.log ("Aprovação: " + chance.toFixed(4) + "%")
 document.getElementById("resultadoMonika").innerHTML = "chance: " + chance.toFixed(4) 
 // Exibe o resultado final no corpo da página HTML
 }
+
+// -----------------------------Verificando a idade------------------------------------------
+
+
+function verificarIdade(){
+    let idade
+    // Declara as variáveis 'chance' (resultado) e 'n' (input do usuário)
+    idade = Number (prompt("Digite aqui a idade: "))
+    if (idade >= 18){
+    // SE (if) tiver 10 ou mais marujos E (&&) a comida por pessoa for 1.5 ou mais:
+        document.getElementById("resultadoIdade").innerHTML = " Maior de idade:"
+        // Exibe o resultado final no corpo da página HTML
+    }
+
+    else {
+    // SENÃO (else), caso a regra do 'if' não seja cumprida:
+        document.getElementById("resultadoIdade").innerHTML = "Menor de idade"
+
+    }
+}
+// -----------------------------ADIVINHAR NUMERO------------------------------------------
+
+function adivinharNumero(){
+    let numero = Math.ceil(Math.random() * 10)
+    // Gera um número aleatório entre 1 e 10 usando Math.random() e arredonda para cima com Math.ceil()
+    let chute = Number(prompt("Adivinhe o número entre 1 e 10: "))
+    // Pede ao usuário para adivinhar o número, converte para Número e guarda em 'chute' 
+    if (chute === numero){
+        document.getElementById("resultadoAdivinhar").innerHTML = "Parabéns! Você acertou o número: " + numero
+        // Se o chute for igual ao número gerado, exibe mensagem de sucesso com o número correto
+    } else {
+        document.getElementById("resultadoAdivinhar").innerHTML = "Que pena! O número correto era: " + numero
+        // Se o chute for diferente do número gerado, exibe mensagem de erro com o número correto      
+    }
+}
+// -----------------------------PROXIMO TEXTO------------------------------------------
+
+
+
