@@ -1,66 +1,58 @@
-<!DOCTYPE html>  
-<!-- Define que este é um documento HTML5 moderno -->
-<html lang="en">
-<!-- Abre a tag principal do site e define o idioma -->
-<head>
-<!-- Cabeçalho: configurações invisíveis para o usuário -->
-<meta charset="UTF-8">                                     
- <!-- Permite o uso de acentuação e caracteres especiais (ex: ç, ã) -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <!-- Ajusta o tamanho da tela para celulares -->
- <link rel="stylesheet" href="style.css">                   
-  <!-- Conecta a página ao seu arquivo de design/estilos (CSS) -->
- <title>Exercicios Senai</title>                                         
-  <!-- Define o título que aparece lá na aba do navegador -->
-</head>                                                         
-<!-- Fecha a sessão do cabeçalho -->
-<body>                                                         
- <!-- Corpo: tudo o que é visível na tela vai aqui dentro -->
-    
-<h1>Exercicios JavaScript <coisas class=""></coisas></h1> 
-<!-- Título principal (H1) da sua página -->
+<!DOCTYPE html>                                               <!-- Define que este é um documento HTML5 moderno -->
+<html lang="en">                                              <!-- Abre a tag principal do site e define o idioma -->
+<head>                                                        <!-- Cabeçalho: configurações invisíveis para o usuário -->
+    <meta charset="UTF-8">                                    <!-- Permite o uso de acentuação e caracteres especiais (ex: ç, ã) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o tamanho da tela para celulares -->
+    <link rel="stylesheet" href="style.css">                  <!-- Conecta a página ao seu arquivo de design/estilos (CSS) -->
+    <title>Exercicios Senai</title>                           <!-- Define o título que aparece lá na aba do navegador -->
+</head>                                                       <!-- Fecha a sessão do cabeçalho -->
+<body>                                                        <!-- Corpo: tudo o que é visível na tela vai aqui dentro -->
 
-<!-- <h2>teste</h2>                                               -->
-<!-- Subtítulo (H2), com fonte um pouco menor que o H1 -->
+    <h1>Exercicios JavaScript <coisas class=""></coisas></h1> <!-- Título principal (H1) da sua página -->
 
-<hr>                                                       
- <!-- <hr> <===== linha ===== Cria uma linha horizontal -->
+                                     <!-- Subtítulo (H2), com fonte um pouco menor que o H1 -->
 
-<button onclick="calcularPrecoBrique()">ROMERO BRIQUE</button>  
-<!-- Botão que, ao ser clicado, executa a função do Brique no JS -->
-<output id="resultadoBrique">Resultado </output>                
-<!-- Espaço (output) onde o JS vai injetar o resultado do Brique -->
+    <hr>                                                      <!-- <hr> <===== linha ===== Cria uma linha horizontal -->
 
+    <button onclick="calcularPrecoBrique()">ROMERO BRIQUE</button> <!-- Botão que, ao ser clicado, executa a função do Brique no JS -->
+    <output id="resultadoBrique">Resultado </output>          <!-- Espaço (output) onde o JS vai injetar o resultado do Brique -->
 
-<br><hr>                                                        
-<!-- <br> quebra a linha para baixo e <hr> cria outra linha divisória -->
-<button onclick="verificarProvisoes()">Capitão Ganso</button>   
-<!-- Botão que aciona a função dos marujos/provisões -->
-<output id="resultadoProvisoes">Resultado </output>             
-<!-- Espaço onde vai aparecer se as provisões são suficientes -->
+    <br><hr>                                                  <!-- <br> quebra a linha para baixo e <hr> cria outra linha divisória -->
+    <button onclick="verificarProvisoes()">Capitão Ganso</button> <!-- Botão que aciona a função dos marujos/provisões -->
+    <output id="resultadoProvisoes">Resultado </output>       <!-- Espaço onde vai aparecer se as provisões são suficientes -->
 
+    <br>                                                      <!-- Quebra a linha novamente para não colar no elemento de cima -->
+    <hr><button onclick="calcularDaMonika()">Monika</button>  <!-- Linha horizontal e botão que aciona o cálculo de chance -->
+    <output id="resultadoMonika">Resultado </output><hr>      <!-- Espaço para o resultado da Monika, seguido de outra linha -->
 
-<br>                                                            
-<!-- Quebra a linha novamente para não colar no elemento de cima -->
-<hr><button onclick="calcularDaMonika()">Monika</button>        
-<!-- Linha horizontal e botão que aciona o cálculo de chance -->
-<output id="resultadoMonika">Resultado </output><hr>            
-<!-- Espaço para o resultado da Monika, seguido de outra linha -->
+    <button onclick="verificarIdade()">Verificar idade</button>
+    <output id="resultadoIdade">Resultado </output>
 
-<button onclick="verificarIdade()">Verificar idade</button>
-<output id="resultadoIdade">Resultado </output>
+    <br><hr>
+    <button onclick="adivinharNumero()">Adivinhe o Número</button>
+    <output id="resultadoAdivinhar">Resultado </output>
 
-<br><hr>
-<button onclick="adivinharNumero()">Adivinhe o Número</button>
-<output id="resultadoAdivinhar">Resultado </output>
+    <br><hr>
+    <button onclick="diaDeSemana()">Dia de Semana</button>
+    <output id="resultadoDiaDeSemana">Resultado</output>
 
-<script src="script.js"></script>                               
-<!-- Carrega o seu arquivo de lógica JavaScript (script.js) -->
+    <br><hr>
+    <button onclick="verificarParidade()">Verificar Paridade</button>
+    <output id="resultadoParidade">Resultado</output>
 
+    <br><hr>
+    <button onclick="calculadoraSimples()">Calculadora Simples</button>
+    <output id="resultadoCalculadora">Resultado</output>
 
-</body>                                                      
-<!-- Fecha o corpo da página -->
-</html>                                                         
-<!-- Fecha a estrutura do documento HTML -->
-<!-- Fecha a estrutura do documento HTML -->
+    <br><hr>
+    <button onclick="verificarSenha()">Verificar Senha</button>
+    <output id="resultadoSenha">Resultado</output>
 
+    <br><hr>
+    <button onclick="classificarNota()">Classificar Nota</button>
+    <output id="resultadoNota">Resultado</output>
+
+    <script src="script.js"></script>                         <!-- Carrega o seu arquivo de lógica JavaScript (script.js) -->
+
+</body>                                                       <!-- Fecha o corpo da página -->
+</html>                                                       <!-- Fecha a estrutura do documento HTML -->

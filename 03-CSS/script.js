@@ -116,7 +116,152 @@ function adivinharNumero(){
         // Se o chute for diferente do número gerado, exibe mensagem de erro com o número correto      
     }
 }
-// -----------------------------PROXIMO TEXTO------------------------------------------
 
+// -----------------------------Dia de Semana-----------------------------------------
+//  function diaDeSemana(){
+//     let numero, dia
+//     // Declara as variáveis 'numero' (input do usuário) e 'dia' (resultado)
+//     numero = Number(prompt("Digite um número de 1 a 7: "))  
+//     // Pede ao usuário para digitar um número de 1 a 7, converte para Número e guarda em 'numero'
+    
+// switch (numero) {                                         // Inicia a estrutura de escolha avaliando a variável 'numero'
+// case 1:                                             // Caso o número seja 1...
+// dia = "Segunda feira ";                           // ...a variável 'dia' recebe "Segunda feira "
+// break                                                 // O 'break' interrompe a execução do switch
+            
+// case 2:                                           // Caso o número seja 2...
+// dia = "Terça Feira";                             // ...a variável 'dia' recebe "Terça Feira"
+// break                                            // Interrompe a verificação
+            
+// case 3:                                          // Caso o número seja 3...
+// dia = "Quarta Feira";                            // ...a variável 'dia' recebe "Quarta Feira"
+// break                                            // Interrompe a verificação
+            
+// case 4:                                          // Caso o número seja 4...
+// dia = "Quinta Feira";                            // ...a variável 'dia' recebe "Quinta Feira"
+// break                                            // Interrompe a verificação
+            
+// case 5:                                          // Caso o número seja 5...
+//  dia = "Sexta Feira";                            // ...a variável 'dia' recebe "Sexta Feira"
+// break                                            // Interrompe a verificação
+            
+// case 6:                                          // Caso o número seja 6...
+// dia = "Sabado";                                  // ...a variável 'dia' recebe "Sabado"
+// break                                            // Interrompe a verificação
+            
+// case 7:                                          // Caso o número seja 7...
+// dia = "Domingo";                                 // ...a variável 'dia' recebe "Domingo"
+// break                                            // Interrompe a verificação
+// default:                                         // Padrão de escape caso o valor não seja nenhum dos números de 1 a 7
+// dia = "Número inválido";                         // ...a variável 'dia' recebe a mensagem de erro
+// }                                                // Fecha o bloco do switch
+    
+//     document.getElementById("resultadoDiaDeSemana").innerHTML = "O dia correspondente é: " + dia; 
+//     // Busca o <output> (ou <div>/<p>) no HTML pelo ID e injeta a mensagem final na tela
+// }
+ function diaDeSemana(){
+    let numero, dia 
+    numero = Number(prompt("Digite um número de 1 a 7: "))
+if (numero === 1){
+dia = "Segunda feira "
+}else if (numero === 2){  
+dia = "Terça Feira"                           
+}else if (numero === 3){     
+dia = "Quarta Feira"
+}else if (numero === 4){        
+dia = "Quinta Feira"
+}   else if (numero === 5){
+dia = "Sexta Feira"
+}   else if (numero === 6){
+dia = "Sabado"
+}   else if (numero === 7){
+dia = "Domingo"
+}   else {
+dia = "Número inválido"
+}
+document.getElementById("resultadoDiaDeSemana").innerHTML = "O dia correspondente é: " + dia
+}      
 
+// -----------------------------Verificando Números Pares---------------------------------------- FIM
 
+// function verificarParidade(){
+
+//     let numero, resultado
+//     numero = Number(prompt("Digite um numero: "))
+//     if (numero == 1){
+//         resultado = "O numero é impar"
+//     } else if (numero == 2){
+//         resultado = "O numero é par"
+//     } else if (numero == 3){
+//         resultado = "O numero é impar"  
+//     } else if (numero == 4){        
+//         resultado = "O numero é par"
+//     }   else if (numero == 5){
+//         resultado = "O numero é impar"
+//     }   else if (numero == 6){
+//         resultado = "O numero é par"
+//     }   else if (numero == 7){
+//         resultado = "O numero é impar"
+//     }   else if (numero == 8){
+//         resultado = "O numero é par"
+//     }   else if (numero == 9){
+//         resultado = "O numero é impar"
+//     }   else if (numero == 10){
+//         resultado = "O numero é par"
+//     }   else {
+//         resultado = "Número inválido"
+    
+// }
+// document.getElementById("resultadoParidade").innerHTML = resultado
+// }
+function verificarParidade(){
+
+    let numero, resultado
+    numero = Number(prompt("Digite um numero: "))           
+    if (numero % 2 === 0){
+        resultado = "O numero é par"
+    } else
+        resultado = "O numero é impar"
+   
+        document.getElementById("resultadoParidade").innerHTML = resultado
+}
+// -----------------------------Calculadora Simples------------------------------------------ FIM
+
+function calculadoraSimples(){
+    let num1, num2, operacao, resultado
+    num1 = Number(prompt("Digite o primeiro numero: "))
+    num2 = Number(prompt("Digite o segundo numero: "))
+    operacao = prompt("Digite a operação (+, -, *, /): ")  
+    if (operacao == "+"){
+        resultado = num1 + num2
+    }   else if (operacao == "-"){
+        resultado = num1 - num2
+    }   else if (operacao == "*"){
+        resultado = num1 * num2
+    }   else if (operacao == "/"){
+        resultado = num1 / num2
+    }
+    document.getElementById("resultadoCalculadora").innerHTML = "O resultado é: " + resultado
+}
+// -----------------------------Senha Segura------------------------------------------------- FIM
+
+function verificarSenha() {
+    let senha, resultado
+    senha = prompt("Digite a senha: ")
+if (senha.length == 8) {resultado = "A senha contém exatamente 8 caracteres", alert(resultado)}
+else if (senha.length < 8) {resultado = "A senha contém menos de 8 caracteres", alert(resultado)} 
+else {resultado = "A senha contém mais de 8 caracteres", alert(resultado)}
+
+document.getElementById("resultadoSenha").innerHTML = resultado
+}
+// -----------------------------Classificação de Notas---------------------------------------- FIM
+function classificarNota() {
+    let nota, resultado
+    nota = Number(prompt("Digite a nota: "))
+    if (nota >= 81 ) {
+        resultado = "Aprovado"
+    } else {
+        resultado = "Reprovado"
+    }
+    document.getElementById("resultadoNota").innerHTML = "O aluno está: " + resultado
+}
