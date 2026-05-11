@@ -40,7 +40,8 @@
 
 .hero-bg {
     /* IMPORTANTE: Coloque o nome da sua imagem do T-Rex aqui embaixo */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('1f042df4-e716-4a8b-8307-6820950a616d.jpg'); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('gemini.js.png'); 
+    background-color: black;
     background-size: cover;
     background-position: center;
     height: 100vh;

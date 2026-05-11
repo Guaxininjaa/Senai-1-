@@ -265,3 +265,27 @@ function classificarNota() {
     }
     document.getElementById("resultadoNota").innerHTML = "O aluno está: " + resultado
 }
+// -----------------------------Dona Bete---------------------------------------- FIM
+
+function verificarMeta() {
+    let valorBruto, valorPremiacao, presentes, comissoes, lucro
+    valorBruto = Number(prompt("Digite o valor bruto: "))
+    valorPremiacao = Number(prompt("Digite o valor da premiação: "))
+    presentes = Number(prompt("Digite o número de presentes: "))
+    comissoes = Number(prompt("Digite o valor das comissões: "))
+    lucro = valorBruto - valorPremiacao - presentes - comissoes 
+    if (lucro > 0) {
+        document.getElementById("resultadoDonaBete").innerHTML = "Lucro de R$" + lucro.toFixed(2)
+    }   else if (lucro < 0) {   
+        document.getElementById("resultadoDonaBete").innerHTML = "Prejuízo de R$" + Math.abs(lucro).toFixed(2)
+        // alert("Prejuízo de R$" + Math.abs(lucro).toFixed(2))
+        let meta = Number(prompt("Digite o valor da meta: "))
+if(lucro > meta){
+    document.getElementById("resultadoDonaBete").innerHTML += " - Meta atingida!"
+} 
+else {
+    let faltou
+    faltou = meta - lucro
+    document.getElementById("resultadoDonaBete").innerHTML += " -  Meta não atingida "
+    document.getElementById("resultadoDonaBete").innerHTML += "Faltou R$" + faltou.toFixed(2)
+}}}

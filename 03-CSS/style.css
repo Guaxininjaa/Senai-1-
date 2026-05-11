@@ -1,14 +1,12 @@
-
-
-body { background-color: hsl(0, 58%, 61%);}
+body { 
+    background-color: hsl(0, 61%, 65%);
+}
 /* Seleciona o corpo inteiro da sua página HTML (o fundo geral do site) */
-/* Define a cor de fundo como preto absoluto (HSL: 0 Matiz, 0% Saturação, 0% Luz) */
-/* Fecha as regras de estilo do corpo da página */
+/* Define a cor de fundo (um tom salmão/avermelhado) */
 
 
-button{
- /* Seleciona todos os elementos <button> do seu HTML para mudar o visual deles */
-/* Fecha o bloco de regras do botão */ 
+button {
+    /* Isso aqui só vai afetar as tags que forem <button> de verdade lá no HTML */
     background-color: rgb(48, 49, 105); 
     /* Define a cor de fundo (azul escuro) */
     color: rgb(8, 248, 0);             
@@ -17,7 +15,7 @@ button{
     /* Espaço interno (distância do texto até a borda) */
     border-radius: 8px;                  
     /* Arredonda os cantos do botão */
-    border: none;                         
+    border: none;                        
     /* Remove a borda padrão do navegador */
     margin: 10px;                        
     /* Espaço externo (distância para os outros elementos) */
@@ -25,14 +23,25 @@ button{
 
 
 hr {
-    border: none;                         
+    border: none;                        
     /* Remove a borda 3D padrão */
     height: 2px;                          
     /* Define a grossura da linha */
     background-color: rgb(27, 35, 105);
-    /* Escolha a cor que quiser aqui! */
+    /* Cor da linha divisória */
 }
 
 
-
-
+/* === ESTE É O SEU BOTÃO INICIO (A TAG LINK) === */
+.btn-laranja {
+    background-color: rgb(48, 49, 105);       /* Fundo escuro */
+    color: rgb(8, 248, 0);                /* Texto cor de abóbora */
+    border-radius: 15px;           /* Arredondamento */
+    padding: 10px 25px;            /* Espaçamento interno */
+    margin: 10px;                  /* Espaço em volta pra não colar no título */
+    
+    /* Configurações extras pra fazer o link fingir que é botão: */
+    text-decoration: none;         /* Tira o risco de baixo do link */
+    display: inline-block;         /* Deixa aplicar largura e altura iguais a um botão */
+    font-weight: bold;             /* Deixa o texto mais grosso */
+}
