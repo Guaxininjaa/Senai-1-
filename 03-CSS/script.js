@@ -342,5 +342,29 @@ function verificarMeta() {
         elementoResultado.innerHTML += "<br>" + tempoDias + " dias";
     }    
 }
+// -----------------------------Não tem garçom de cara feia---------------------------------------- FIM
+
+function verificarEmprestimo() {
+    
+    let salario, emprestimo, prestacoes, valorParcela
+    let limite
+
+    let elementoResultado = document.getElementById("resultadoEmprestimo")
+    
+    salario = Number(prompt("Digite o salário do colaborador: "))
+    emprestimo = Number(prompt("Digite o valor do empréstimo: "))
+    prestacoes = Number(prompt("Digite o número de prestações: "))
+
+    
+    valorParcela = emprestimo / prestacoes
+    limite = salario * 0.3
+
+    if (valorParcela <= limite) {
+        elementoResultado.innerHTML = "Empréstimo aprovado! Valor da parcela: R$" + valorParcela.toFixed(2)
+    } else {
+        elementoResultado.innerHTML = "Empréstimo negado. Valor da parcela: R$" +  valorParcela.toFixed(2) + " excede o limite do salário."
+    } 
+}
+
 
 
