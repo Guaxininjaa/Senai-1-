@@ -360,11 +360,31 @@ function verificarEmprestimo() {
     limite = salario * 0.3
 
     if (valorParcela <= limite) {
-        elementoResultado.innerHTML = "Empréstimo aprovado! Valor da parcela: R$" + valorParcela.toFixed(2)
+        elementoResultado.innerHTML = "<br>Empréstimo aprovado!<br> Valor da parcela: R$" + valorParcela.toFixed(2)
     } else {
-        elementoResultado.innerHTML = "Empréstimo negado. Valor da parcela: R$" +  valorParcela.toFixed(2) + " excede o limite do salário."
+        elementoResultado.innerHTML = "<br>Empréstimo negado. <br> Valor da parcela: R$" +  valorParcela.toFixed(2) + "<br>" + " Excede o limite do salário."
     } 
 }
+ function verificarEmprestimoJuros() {
+    
+    let salario, emprestimo, prestacoes, valorParcela
+    let limite 
+    
+    let elementoResultado = document.getElementById("resultadoEmprestimoJuros")
+    
+    salario = Number(prompt("Digite o salário do colaborador: "))
+    emprestimo = Number(prompt("Digite o valor do empréstimo: "))
+    prestacoes = Number(prompt("Digite o número de prestações: "))
+    
+    valorParcela = emprestimo * 1.5 / prestacoes
+    limite = salario * 0.3
+
+    if (valorParcela <= limite) {
+        elementoResultado.innerHTML = "<br>Empréstimo aprovado!<br> Valor da parcela: R$" + valorParcela.toFixed(2)
+    } else {
+        elementoResultado.innerHTML = "<br>Empréstimo negado. <br> Valor da parcela: R$" +  valorParcela.toFixed(2) + "<br>" + " Excede o limite do salário."
+    }
 
 
+}
 
