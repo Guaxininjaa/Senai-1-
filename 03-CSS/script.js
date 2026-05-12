@@ -376,7 +376,7 @@ function verificarEmprestimo() {
     emprestimo = Number(prompt("Digite o valor do empréstimo: "))
     prestacoes = Number(prompt("Digite o número de prestações: "))
     
-    valorParcela = emprestimo * 1.5 / prestacoes
+    valorParcela = emprestimo * 1.3 / prestacoes
     limite = salario * 0.3
 
     if (valorParcela <= limite) {
@@ -384,7 +384,5 @@ function verificarEmprestimo() {
     } else {
         elementoResultado.innerHTML = "<br>Empréstimo negado. <br> Valor da parcela: R$" +  valorParcela.toFixed(2) + "<br>" + " Excede o limite do salário."
     }
-
-
 }
 
