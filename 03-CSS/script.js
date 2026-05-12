@@ -280,12 +280,67 @@ function verificarMeta() {
         document.getElementById("resultadoDonaBete").innerHTML = "Prejuízo de R$" + Math.abs(lucro).toFixed(2)
         // alert("Prejuízo de R$" + Math.abs(lucro).toFixed(2))
         let meta = Number(prompt("Digite o valor da meta: "))
-if(lucro > meta){
+    if(lucro > meta){
     document.getElementById("resultadoDonaBete").innerHTML += " - Meta atingida!"
-} 
-else {
+    } 
+    else {
     let faltou
     faltou = meta - lucro
     document.getElementById("resultadoDonaBete").innerHTML += " -  Meta não atingida "
     document.getElementById("resultadoDonaBete").innerHTML += "Faltou R$" + faltou.toFixed(2)
 }}}
+
+// -----------------------------StarUber---------------------------------------- FIM
+
+// function verificarDistancia() {
+    
+//     let distancia, tempoViagem
+//     let  velocidadeLuz = 300000
+    
+//     distancia = Number(prompt("Digite a distância em km: "));
+//     tempoViagem = distancia / velocidadeLuz
+    
+//     document.getElementById("resultadoDistancia").innerHTML = "<br>" + "Tempo de viagem: " + tempoViagem + " segundos";    
+
+    
+//     if (tempoViagem > 60) {
+//         document.getElementById("resultadoDistancia").innerHTML += "<br>" + (tempoViagem / 60) + " minutos";
+//     } 
+//     if (tempoViagem > 3600) {
+//         document.getElementById("resultadoDistancia").innerHTML += "<br>" + (tempoViagem / 3600) + " horas";
+//     }   
+//     if (tempoViagem > 86400) { 
+//         document.getElementById("resultadoDistancia").innerHTML += "<br>" + (tempoViagem / 86400) + " dias";
+//     }   
+//     if (tempoViagem > 2592000) {
+//         document.getElementById("resultadoDistancia").innerHTML += "<br>" + (tempoViagem / 2592000) + " meses";
+//     }
+//     if (tempoViagem > 31104000) {
+//         document.getElementById("resultadoDistancia").innerHTML += "<br>" + (tempoViagem / 31104000) + " anos";
+//     }
+// }
+ function verificarDistancia() {
+    
+    let distancia, tempoSegundos
+    let  velocidadeLuz = 300000 
+    let elementoResultado = document.getElementById("resultadoDistancia")
+    
+    distancia = Number(prompt("Digite a distância em km: "))
+    tempoSegundos = distancia / velocidadeLuz
+
+    elementoResultado.innerHTML = "<br>" + "Tempo de viagem: " + tempoSegundos + " segundos";
+    if (tempoSegundos > 60) {
+        tempoMinutos = tempoSegundos / 60
+        elementoResultado.innerHTML += "<br>" + tempoMinutos + " minutos";
+    }
+    if (tempoMinutos > 60) {
+        tempoHoras = tempoMinutos / 60
+        elementoResultado.innerHTML += "<br>" + tempoHoras + " horas";
+    }
+    if (tempoHoras > 24) {
+        tempoDias = tempoHoras / 24
+        elementoResultado.innerHTML += "<br>" + tempoDias + " dias";
+    }    
+}
+
+
