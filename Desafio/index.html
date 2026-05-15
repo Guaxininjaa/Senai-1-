@@ -13,7 +13,7 @@
         <a href="HOME.HTML" class="btn-back-modern">
             <span class="icon">←</span> Início
         </a>
-        <div class="status-badge">Apresentação: Nível Avançado</div>
+        <div class="status-badge">Apresentação: Nível Especialista</div>
     </nav>
 
     <main class="main-content">
@@ -21,7 +21,7 @@
             <div class="header-line"></div>
             <h1 class="glow-text">Operadores <span>JavaScript</span></h1>
             <p class="lead-text">
-                O guia definitivo com todas as estruturas lógicas e matemáticas disponíveis na linguagem.
+                O guia definitivo com todas as estruturas lógicas, matemáticas e de memória disponíveis na linguagem.
             </p>
         </header>
 
@@ -34,9 +34,9 @@
                 <p>Cálculos matemáticos essenciais.</p>
                 <ul class="op-list">
                     <li><code>+ - * /</code> <span>Operações Básicas</span></li>
-                    <li><code>%</code> <span>Módulo (Resto da divisão)</span></li>
-                    <li><code>**</code> <span>Exponenciação (Potência)</span></li>
-                    <li><code>++ --</code> <span>Incremento / Decremento</span></li>
+                    <li><code>%</code> <span>Módulo (Resto)</span></li>
+                    <li><code>**</code> <span>Exponenciação</span></li>
+                    <li><code>++ --</code> <span>Incremento/Decremento</span></li>
                 </ul>
                 <button class="btn-action" onclick="abrirModal('aritmeticos')">Explorar Protótipo</button>
             </article>
@@ -46,7 +46,7 @@
                     <span class="card-number">02</span>
                     <h3>Atribuição</h3>
                 </div>
-                <p>Atribuição e atualização de variáveis.</p>
+                <p>Gravação e atualização de variáveis.</p>
                 <ul class="op-list">
                     <li><code>=</code> <span>Atribuição Simples</span></li>
                     <li><code>+= -=</code> <span>Soma/Subtrai e atribui</span></li>
@@ -63,10 +63,10 @@
                 </div>
                 <p>Análise entre dois valores (Retorna Boolean).</p>
                 <ul class="op-list">
-                    <li><code>==</code> <span>Igual a (Valor)</span></li>
-                    <li><code>===</code> <span>Idêntico a (Valor e Tipo)</span></li>
-                    <li><code>!= !==</code> <span>Diferente e Estritamente Diferente</span></li>
-                    <li><code>> < >= <=</code> <span>Maior/Menor que</span></li>
+                    <li><code>== !=</code> <span>Igual / Diferente (Valor)</span></li>
+                    <li><code>=== !==</code> <span>Idêntico (Valor e Tipo)</span></li>
+                    <li><code>> <</code> <span>Maior / Menor</span></li>
+                    <li><code>>= <=</code> <span>Maior ou igual / Menor ou igual</span></li>
                 </ul>
                 <button class="btn-action" onclick="abrirModal('comparacao')">Explorar Protótipo</button>
             </article>
@@ -85,12 +85,26 @@
                 <button class="btn-action" onclick="abrirModal('logicos')">Explorar Protótipo</button>
             </article>
 
-            <article class="glass-card highlight-card">
+            <article class="glass-card">
                 <div class="card-header">
                     <span class="card-number">05</span>
+                    <h3>Concatenação (Strings)</h3>
+                </div>
+                <p>Manipulação e junção de textos.</p>
+                <ul class="op-list">
+                    <li><code>+</code> <span>Junta dois textos</span></li>
+                    <li><code>+=</code> <span>Adiciona texto ao existente</span></li>
+                    <li><code>`${ }`</code> <span>Template Literals (Moderno)</span></li>
+                </ul>
+                <button class="btn-action" onclick="abrirModal('strings')">Explorar Protótipo</button>
+            </article>
+
+            <article class="glass-card highlight-card">
+                <div class="card-header">
+                    <span class="card-number">06</span>
                     <h3>Condicional (Ternário)</h3>
                 </div>
-                <p>A forma resumida e profissional da estrutura "if/else" em uma única linha.</p>
+                <p>A forma resumida e profissional da estrutura "if/else".</p>
                 <ul class="op-list">
                     <li><code>condição ?</code> <span>Se for verdadeiro...</span></li>
                     <li><code>:</code> <span>Se for falso...</span></li>
@@ -100,10 +114,24 @@
 
             <article class="glass-card">
                 <div class="card-header">
-                    <span class="card-number">06</span>
+                    <span class="card-number">07</span>
+                    <h3>Bit a Bit (Bitwise)</h3>
+                </div>
+                <p>Operações de baixo nível direto nos bits (0 e 1).</p>
+                <ul class="op-list">
+                    <li><code>& |</code> <span>AND / OR (Bit a bit)</span></li>
+                    <li><code>^ ~</code> <span>XOR / NOT (Inversão)</span></li>
+                    <li><code><< >></code> <span>Deslocamento (Shift)</span></li>
+                </ul>
+                <button class="btn-action" onclick="abrirModal('bitwise')">Explorar Protótipo</button>
+            </article>
+
+            <article class="glass-card">
+                <div class="card-header">
+                    <span class="card-number">08</span>
                     <h3>Identificação de Tipos</h3>
                 </div>
-                <p>Verificam o tipo de dados que o sistema está recebendo.</p>
+                <p>Verificam o tipo de dados na memória.</p>
                 <ul class="op-list">
                     <li><code>typeof</code> <span>Retorna o tipo (Ex: "string")</span></li>
                     <li><code>instanceof</code> <span>Verifica a origem do objeto</span></li>
@@ -113,23 +141,50 @@
 
             <article class="glass-card">
                 <div class="card-header">
-                    <span class="card-number">07</span>
+                    <span class="card-number">09</span>
                     <h3>Relacionais (Objetos)</h3>
                 </div>
-                <p>Ferramentas para manipular e verificar propriedades de objetos em memória.</p>
+                <p>Ferramentas para verificar propriedades.</p>
                 <ul class="op-list">
-                    <li><code>in</code> <span>Verifica se existe num objeto</span></li>
-                    <li><code>delete</code> <span>Deleta uma propriedade do objeto</span></li>
+                    <li><code>in</code> <span>Verifica se propriedade existe</span></li>
+                    <li><code>hasOwnProperty</code> <span>Verificação direta (Método)</span></li>
                 </ul>
                 <button class="btn-action" onclick="abrirModal('relacionais')">Explorar Protótipo</button>
             </article>
 
             <article class="glass-card">
                 <div class="card-header">
-                    <span class="card-number">08</span>
+                    <span class="card-number">10</span>
+                    <h3>Memória e Unários</h3>
+                </div>
+                <p>Controle direto do sistema e variáveis.</p>
+                <ul class="op-list">
+                    <li><code>delete</code> <span>Remove propriedade da memória</span></li>
+                    <li><code>void</code> <span>Avalia expressão sem retorno</span></li>
+                    <li><code>new</code> <span>Cria nova instância de objeto</span></li>
+                </ul>
+                <button class="btn-action" onclick="abrirModal('memoria')">Explorar Protótipo</button>
+            </article>
+
+            <article class="glass-card">
+                <div class="card-header">
+                    <span class="card-number">11</span>
+                    <h3>Espalhamento (Spread)</h3>
+                </div>
+                <p>Expande e clona Arrays ou Objetos facilmente.</p>
+                <ul class="op-list">
+                    <li><code>...</code> <span>Spread (Espalha elementos)</span></li>
+                    <li><code>...</code> <span>Rest (Agrupa parâmetros)</span></li>
+                </ul>
+                <button class="btn-action" onclick="abrirModal('spread')">Explorar Protótipo</button>
+            </article>
+
+            <article class="glass-card">
+                <div class="card-header">
+                    <span class="card-number">12</span>
                     <h3>Especiais Modernos</h3>
                 </div>
-                <p>Operadores recentes adicionados para evitar erros (Bugs) comuns.</p>
+                <p>Prevenção de erros e códigos limpos.</p>
                 <ul class="op-list">
                     <li><code>??</code> <span>Coalescência Nula (Nullish)</span></li>
                     <li><code>?.</code> <span>Encadeamento Opcional</span></li>
