@@ -3,12 +3,12 @@ let totalPago = 0;
 let dinoEscolhido = "";
 let rodadaGratis = false;
 
-const idade = parseInt(prompt("Digite a sua idade para jogar!"));
+let idade = parseInt(prompt("Digite a sua idade para jogar!"));
 if (isNaN(idade) || idade < 18) {
     alert("Você não tem idade suficiente para jogar!");
-    exit();
+    
 }
-const dinos = ["Espinossauro", "T-Rex", "Braquiossauro", "Velocirraptor", "Estegossauro", "Triceratopo", "Anquilossauro", "Parassaurolofo", "Alossauro", "Carnotauro"];
+let dinos = ["Espinossauro", "T-Rex", "Braquiossauro", "Velocirraptor", "Estegossauro", "Triceratopo", "Anquilossauro", "Parassaurolofo", "Alossauro", "Carnotauro"];
 
 function escolherDino(nome) {
     dinoEscolhido = nome;
