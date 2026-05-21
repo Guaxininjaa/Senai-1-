@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo do Dino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jogo do Dino! 🦖🦕 <button id="btnDonaBete" onclick="acessarPainel()">🕵️‍♀️</button></h1>
+        
+        <div class="aposta-area">
+            <label>Valor da aposta: R$ </label>
+            <input type="number" id="valorAposta">
+        </div>
+
+        <div class="grid-dinos" id="gridDinos">
+            <button onclick="escolherDino('Espinossauro')">Espinossauro</button>
+            <button onclick="escolherDino('T-Rex')">T-Rex</button>
+            <button onclick="escolherDino('Braquiossauro')">Braquiossauro</button>
+            <button onclick="escolherDino('Velocirraptor')">Velocirraptor</button>
+            <button onclick="escolherDino('Estegossauro')">Estegossauro</button>
+            <button onclick="escolherDino('Triceratopo')">Triceratopo</button>
+            <button onclick="escolherDino('Anquilossauro')">Anquilossauro</button>
+            <button onclick="escolherDino('Parassaurolofo')">Parassaurolofo</button>
+            <button onclick="escolherDino('Alossauro')">Alossauro</button>
+            <button onclick="escolherDino('Carnotauro')">Carnotauro</button>
+        </div>
+
+        <div class="acoes-area">
+            <button class="btn-acao" onclick="jogar()">Apostar</button>
+            <button class="btn-acao" onclick="escolhaAleatoria()">Escolha pra mim</button>
+        </div>
+
+        <div id="resultadoArea">
+            <p>!! RESULTADO !!</p>
+            <p>Seu dino: <span id="displaySeuDino">-</span></p>
+            <p>Dino sorteado: <span id="displaySorteado">-</span></p>
+        </div>
+
+        <button id="btn50x" style="display:none;" onclick="trapaça50x()">Chance única: 50x</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

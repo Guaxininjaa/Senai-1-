@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Var</title>
+    <title>Variaveis</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
+<!-- --------------------------------------VARIAVEIS ----------------------------------------  -->
+<h1>Variaveis</h1>
+
+
 <body>
-    <script src="script.js"></script> 
-  <!-- --------------------------------------------------------------------------------------->
-    <h1>Variaveis</h1>
-    
+
     <button onclick="IncrementarContagem()">+</button>
     <button onclick="DecrementarContagem()">-</button>
     <button onclick="ResetarContagem()">Reset</button>
     <button onclick="Adicionar10()">+10</button>
     <button onclick="Subtrair10()">-10</button>
-    <p id="p-contagem">
-<hr>
-<!-- --------------------------------------------------------------------------------------->
-
-   
+    <p id="p-contagem"></p>
+    
+    <hr>
+   <!-- --------------------------------------HARRY Ploter----------------------------------------  -->
     <h2>Vendas na Harry Ploter</h2>
-    <p id="totalVendido">Total de vendas: R$0,00</p>
+    
+    <p id="totalVendido">Total de vendas: R$0.00</p>
+    
     Valor da venda R$
     <input id="inputVenda" type="text">
     <button onclick="registrarVenda()">Cadastrar</button>
+    <button onclick="limparVendas()">Limpar Vendas</button>
+    
     <div id="listaVendas"></div>
-    
+<hr>
 
 
-        
 
-
-    </p>
-    <hr>
-    
+    <script src="script.js"></script>
 </body>
 </html>
