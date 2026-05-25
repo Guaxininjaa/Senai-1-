@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dona Bete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Dados da Dona Bete 🎲</h2>
+        
+        <p class="verde">Total das rolagens: <strong id="total">0</strong> <button id="btn-reset">Reset</button></p>
+        <p class="verde">Último dado: <strong id="ultimo">-</strong></p>
+
+        <div>
+            <button onclick="rolar('D2', 2)">D2</button>
+            <button onclick="rolar('D4', 4)">D4</button>
+            <button onclick="rolar('D6', 6)">D6</button>
+            <button onclick="rolar('D10', 10)">D10</button>
+            <button onclick="rolar('D12', 12)">D12</button>
+            <button onclick="rolar('D20', 20)">D20</button>
+        </div>
+
+        <hr>
+
+        <div class="bonus">
+            <div class="coluna">
+                <h3>Histórico</h3>
+                <ul id="historico"></ul>
+            </div>
+            <div class="coluna">
+                <h3>Quantidades</h3>
+                <ul id="quantidades"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
