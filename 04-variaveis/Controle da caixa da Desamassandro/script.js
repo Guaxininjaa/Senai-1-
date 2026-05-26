@@ -46,4 +46,4 @@ document.getElementById('btn-limpar').addEventListener('click', () => {
         document.getElementById('txt-total').innerText = document.getElementById('txt-sandro').innerText = document.getElementById('txt-celso').innerText = document.getElementById('txt-seguradora').innerText = "R$ 0.00";
         document.getElementById('txt-clientes').innerText = "0";
     }
-});
+})
