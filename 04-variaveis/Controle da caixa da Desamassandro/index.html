@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Caixa Desamassandro</title>
+</head>
+<body>
+    <h1>Caixa Desamassandro</h1>
+    
+    <form id="form-servico">
+        <label>Valor do Orçamento (R$): 
+            <input type="number" id="valor" step="0.01" required>
+        </label>
+        <br><br>
+
+        <label>Origem do Cliente: 
+            <select id="origem" required>
+                <option value="normal">Cliente Normal</option>
+                <option value="indicacao">Indicação do Seu Celso</option>
+                <option value="seguradora">Seguradora</option>
+            </select>
+        </label>
+        <br><br>
+
+        <button type="submit">Registrar Serviço</button>
+        <button type="button" id="btn-limpar">Limpar Tudo</button>
+    </form>
+
+    <hr>
+
+    <h2>Resumo do Caixa</h2>
+    <p>Total Recebido: <strong id="txt-total">R$ 0,00</strong></p>
+    <p>Faturamento Sandro: <strong id="txt-sandro">R$ 0,00</strong></p>
+    <p>Repasse Seu Celso: <strong id="txt-celso">R$ 0,00</strong></p>
+    <p>Faturamento Seguradoras: <strong id="txt-seguradora">R$ 0,00</strong></p>
+    <p>Clientes Atendidos: <strong id="txt-clientes">0</strong></p>
+
+    <br>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
