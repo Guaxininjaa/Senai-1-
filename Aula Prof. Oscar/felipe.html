@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="felipe.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>    
+        </nav>
+    </header>
+    <main>
+        <section id="galeria">
+            <h2>Galeria de Fotos</h2>
+            <div class="galeria">
+                <div class="galeria-item">
+                    <img src="https://fastly.picsum.photos/id/146/536/354.jpg?hmac=4P0o1OZvYRJq_jIExQUpqq4kQzW518ORptvq2blN-qU" alt="Foto 1">  
+                    <img src="https://fastly.picsum.photos/id/376/536/354.jpg?hmac=FY3pGZTc81LYCnJOB0PiRX570QylTn7xchj6FZA6TeQ" alt="Foto 2">
+                </div> 
+                <div class="galeria-item">
+                    <img src="https://fastly.picsum.photos/id/522/536/354.jpg?hmac=2qrt5LEJcx2B__YaKzZG3LV4EOpUqlanRy-CxdifXjE" alt="Foto 3">
+                <img src="https://fastly.picsum.photos/id/381/536/354.jpg?hmac=UrahXEEnGTL3Aa0mUNERzMBn2X2Wf4POTUxC8MjRW1o" alt="Foto 4">
+                </div>
+                <div class="galeria-item">
+                    <img src="https://fastly.picsum.photos/id/1057/536/354.jpg?hmac=Bx6hxppJnxgdVDhSwJp0YFx6GxVMKj8XIRbuQmKysz4" alt="Foto 5">
+                    <img src="https://fastly.picsum.photos/id/37/536/354.jpg?hmac=NjH2FUs57UDl_TUKmfUqmg8qCvIaGR0nA12hwsN-BbY" alt="Foto 6">
+                </div>
+            </div>
+        </section>
+
+        <section id="Contato">
+            <h2>Fale conosco</h2>
+            <div class="contato-container">
+                <div class="contato-info">
+                    <h3>Informações</h3>
+                    <br><strong>Endereço</strong>
+                    <p>Rua dos bobos</p>
+                </div>
+                
+                <form class="contato-form" id="meuFormulario">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <p>Bem-vindo ao nosso site!</p>
+    
+    <footer>
+        <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script src="felipe.js"></script>
+</body>
+</html>
