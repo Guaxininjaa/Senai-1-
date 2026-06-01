@@ -50,8 +50,11 @@ function acessarPainel() {
         alert("Você ganhou uma rodada grátis");
     }
 }
-
-function trapaça50x() {
-    alert("Ops! O sistema travou. Tente novamente!");
-    document.getElementById('btn50x').style.display = "none";
+// \/ \/ \/ \/ \/ \/ feito com auxilio da I.A \/ \/ \/ \/ \/ \/ 
+function trapaça50x() {                                                  
+    alert("Ops! O sistema travou. Tente novamente!");                    
+   
+    document.getElementById('btn50x').style.display = "none";           
+document.getElementById('btn50x').style.display = "none";                
+// /\ /\ /\ /\ /\ /\ feito com auxilio da I.A /\ /\ /\ /\ /\ /\
 }
