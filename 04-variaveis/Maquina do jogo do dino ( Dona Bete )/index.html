@@ -10,8 +10,7 @@
     <div class="container">
         
         <h1> <button id="btnDonaBete" onclick="acessarPainel()">🕵️‍♀️</button></h1>
-     <!-- 🦖🦕 -->
-        <div class="aposta-area">
+     <div class="aposta-area">
             <label>Valor da aposta: R$ </label>
             <input type="number" id="valorAposta">
         </div>
@@ -30,20 +29,19 @@
         </div>
 
         <div class="acoes-area">
-            <button class="btn-acao" onclick="jogar()">Apostar</button>
+            <button class="btn-acao" onclick="jogar()"> Jogar</button>
             <button class="btn-acao" onclick="escolhaAleatoria()">Escolha pra mim</button>
         </div>
 
-        <div id="resultadoArea">
+        <div>
             <p>!! RESULTADO !!</p>
             <p>Seu dino: <span id="displaySeuDino">-</span></p>
             <p>Dino sorteado: <span id="displaySorteado">-</span></p>
         </div>
-<!-- // \/ \/ \/ \/ \/ \/  feito com auxilio da I.A \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ -->
-        <button id="btn50x" style="display:none;" onclick="trapaça50x()">Chance única: 50x</button>
- <!-- // /\ /\ /\ /\ /\ /\ feito com auxilio da I.A /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\-->
-    </div>
 
+        <button id="btn50x" style="display:none;" onclick="trapaça50x()">Chance única: 50x</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
