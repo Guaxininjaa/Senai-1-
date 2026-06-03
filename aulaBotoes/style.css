@@ -1,0 +1,129 @@
+header {
+    background-color: #6d9b80;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    box-shadow: #070004 2px 5px 50px, #ff009d 2px 5px 50px, #3003fa 2px 5px 50px;
+
+  
+   
+}
+
+/* ----------------------------------------------------------------------------------------- */
+body {
+    background-color: #c0eed3;
+    font-family: Arial, sans-serif;
+
+
+
+
+
+
+
+
+
+}
+/* ----------------------------------------------------------------------------------------- */
+h1 {
+    text-align: center;
+    color: #130a0f;
+    font-size: 40px;
+    text-shadow: #000000 2px 5px 50px, #e98e05c9 2px 5px 50px, #3003fa 2px 5px 50px;
+   
+}
+h1:hover {
+    text-shadow: #000000 2px 5px 50px, #e98e05c9 2px 5px 50px, #3003fa 2px 5px 50px;
+    color: #0e0107;
+    font-size: 50px;
+}   
+
+/* ----------------------------------------------------------------------------------------- */
+.btn1 {
+    margin: 30px;
+    padding: 10px 10px;
+    background-color: #bb5b96;
+    color: rgb(24, 4, 4);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}   
+
+.btn1:hover {
+    background-color: #bb5b96;
+    color: #0e0107;
+    border: #bb5b96 solid 2px;
+    font-size: 20px;    
+    box-shadow: #070004 2px 5px 50px, #ff009d 2px 5px 50px, #3003fa 2px 5px 50px;
+    transform: scale(1.2) rotate(-30deg);
+}
+/* ----------------------------------------------------------------------------------------- */
+.btn2 {
+    margin: 30px;
+    padding: 10px 10px;
+    background-color: #FF5500;
+    color: rgb(24, 4, 4);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}   
+
+.btn2:hover {
+    background-color: #FF5500;
+    color: #0e0107;
+    /* border: #000000 solid 2px; */
+    font-size: 20px;    
+    box-shadow: #C04000 2px 5px 50px, #C04000 2px 5px 50px, #C04000 5px 5px 50px;
+    transform: scale(1.2) rotate(30deg);
+}
+/* ----------------------------------------------------------------------------------------- */
+
+.btn3 {
+    margin: 30px;
+    padding: 10px 10px;
+    background-color: #0000CC;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}   
+
+.btn3:hover {
+    background-color: #3700ff;
+    color: #0e0107;
+    /* border: #000000 solid 2px; */
+    font-size: 20px;    
+    box-shadow: #0000CC 2px 5px 50px, #0000CC 2px 5px 50px, #0000CC 5px 5px 50px;
+    transform: scale(1.2) rotate(30deg);
+
+}
+
+ /* -----------------------------------------------------------------------------------------  */
+
+.btn4 {
+    margin: 30px;
+    padding: 10px 10px;
+    background-color: #2EFF2E;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+   
+}   
+
+.btn4:hover{
+    background-color: #2EFF2E;
+    color: #0e0107;
+    /* border: #000000 solid 2px; */
+    font-size: 20px;    
+    box-shadow:#2EFF2E 2px 5px 50px,#2EFF2E 2px 5px 50px, #2EFF2E 5px 5px 50px;
+    transform: scale(1.2) rotate(-30deg);
+}
+/* -----------------------------------------------------------------------------------------  */
+
+
+
+
+
+
+
+
