@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabuada Interativa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1> Tabuada</h1>
+  <p class="subtitulo">Digite um número e veja a tabuada completa</p>
+
+  <div class="card">
+    <label for="numero">Número</label>
+
+    <div class="input-row">
+      <input type="number" id="numero" />
+      <button onclick="gerarTabuada()">Gerar</button>
+    </div>
+
+    <p class="aviso-erro" id="erro"> Digite um número entre 0 e 100.</p>
+
+    <div class="resultado" id="resultado">
+      <div class="numero-destaque" id="numero-titulo"></div>
+      <div id="linhas"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

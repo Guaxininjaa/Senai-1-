@@ -1,0 +1,98 @@
+body { 
+    background-color: #05160c; /* Um fundo ainda mais escuro para destacar o jogo */
+    color: #ffffff; /* Texto branco para dar contraste com a imagem */
+    font-family: sans-serif; 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container { 
+    max-width: 800px; /* Aumentei um pouco para caberem os 5 botões lado a lado */
+    width: 100%;
+    margin: 20px auto; 
+    padding: 40px 20px; 
+    border: 2px solid #4ade80; 
+    border-radius: 15px;
+    text-align: center;
+    
+    /* AQUI ENTRA A IMAGEM DE FUNDO */
+    background-image: url('unnamed.jpg');
+    background-size: cover; 
+    background-position: center;
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+h1 {
+    text-shadow: 2px 2px 4px #000000; /* Sombra no texto para leitura fácil sobre a imagem */
+}
+
+.aposta-area {
+    background: rgba(0, 0, 0, 0.6); /* Fundo transparente escuro atrás do texto */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.grid-dinos { 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas para bater com a imagem */
+    gap: 12px; 
+    margin: 20px 0; 
+}
+
+button { 
+    background: rgba(43, 110, 68, 0.9); /* Verde escuro com um pouco de transparência */
+    color: white; 
+    border: 2px solid #4ade80; 
+    padding: 15px 5px; /* Mais padding para ficar mais quadrado */
+    cursor: pointer; 
+    border-radius: 10px; /* LATERAIS ARREDONDADAS AQUI */
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover { 
+    background: #4ade80; 
+    color: #0b2d18;
+    transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
+}
+
+/* Botões maiores embaixo */
+.btn-acao {
+    padding: 15px 30px;
+    font-size: 16px;
+    margin: 0 10px;
+    background: rgba(234, 179, 8, 0.9); /* Amarelado para destacar */
+    border-color: #facc15;
+}
+
+.btn-acao:hover {
+    background: #facc15;
+}
+
+input { 
+    padding: 8px; 
+    width: 100px; 
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+#resultadoArea {
+    background: rgba(0, 0, 0, 0.7); /* Fundo translúcido escuro para os resultados */
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #4ade80;
+}
+
+/* Botão secreto da Dona Bete */
+#btnDonaBete {
+    background: none;
+    border: none;
+    padding: 0;
+}
