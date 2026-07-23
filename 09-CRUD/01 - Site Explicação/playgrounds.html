@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoArrays - Playgrounds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎮 DinoPlaygrounds</h1>
+        <p class="subtitulo">Laboratórios interativos: os 14 métodos de array</p>
+    </header>
+
+    <nav>
+        <a href="home.html">⬅️ Teoria</a>
+        <a href="#labFinal">push/pop</a>
+        <a href="#labInicio">shift/unshift</a>
+        <a href="#labSplice">splice</a>
+        <a href="#labSlice">slice</a>
+        <a href="#labBusca">indexOf/includes</a>
+        <a href="#labForEach">forEach</a>
+        <a href="#labMap">map</a>
+        <a href="#labFilter">filter</a>
+        <a href="#labReduce">reduce</a>
+        <a href="#labOrdem">sort/reverse</a>
+        <a href="#labQuiz">Quiz</a>
+        <a href="#labDesafio">Desafio</a>
+    </nav>
+
+    <main>
+
+        <!-- ============ LAB 1: PUSH E POP (FINAL) ============ -->
+        <section id="labFinal">
+            <h2>1️⃣ push() e pop() — o FINAL do array</h2>
+            <p>
+                O <strong>push()</strong> adiciona no final e <strong>retorna o novo tamanho</strong>.
+                O <strong>pop()</strong> remove do final e <strong>retorna o elemento removido</strong>.
+            </p>
+
+            <div id="finalVisual" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="text" id="finalCampo" placeholder="Nome do dinossauro...">
+                <button onclick="labPush()">push()</button>
+                <button onclick="labPop()">pop()</button>
+                <button onclick="resetarFinal()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <div id="finalResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 2: SHIFT E UNSHIFT (INÍCIO) ============ -->
+        <section id="labInicio">
+            <h2>2️⃣ unshift() e shift() — o INÍCIO do array</h2>
+            <p>
+                O <strong>unshift()</strong> adiciona no início e <strong>retorna o novo tamanho</strong>.
+                O <strong>shift()</strong> remove do início e <strong>retorna o elemento removido</strong>.
+                Repare como TODOS os índices mudam!
+            </p>
+
+            <div id="inicioVisual" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="text" id="inicioCampo" placeholder="Nome do dinossauro...">
+                <button onclick="labUnshift()">unshift()</button>
+                <button onclick="labShift()">shift()</button>
+                <button onclick="resetarInicio()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <div id="inicioResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 3: SPLICE ============ -->
+        <section id="labSplice">
+            <h2>3️⃣ splice() — o canivete suíço ✂️</h2>
+            <p>
+                Formato: <strong>splice(posição, quantosRemover, novoItem)</strong>.
+                Remove, adiciona ou substitui em QUALQUER posição, e
+                <strong>retorna um array com os removidos</strong>.
+            </p>
+
+            <div id="spliceVisual" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="number" id="splicePosicao" placeholder="Posição (ex: 1)" min="0">
+                <input type="number" id="spliceQuantos" placeholder="Quantos remover" min="0">
+                <input type="text" id="spliceNovo" placeholder="Novo item (opcional)">
+                <button onclick="labSplice()">executar splice()</button>
+                <button onclick="resetarSplice()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <div id="spliceResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 4: SLICE ============ -->
+        <section id="labSlice">
+            <h2>4️⃣ slice() — copiar sem estragar 🍕</h2>
+            <p>
+                Formato: <strong>slice(início, fim)</strong> — copia do índice
+                <strong>início</strong> ATÉ o <strong>fim</strong> (sem incluir o fim!),
+                e <strong>NÃO altera o original</strong>.
+            </p>
+
+            <p><strong>Array original (nunca muda!):</strong></p>
+            <div id="sliceVisualOriginal" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="number" id="sliceInicio" placeholder="Início (ex: 1)" min="0">
+                <input type="number" id="sliceFim" placeholder="Fim (ex: 3)" min="0">
+                <button onclick="labSlice()">executar slice()</button>
+            </div>
+
+            <p><strong>Cópia gerada:</strong></p>
+            <div id="sliceVisualCopia" class="arrayBox"></div>
+
+            <div id="sliceResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 5: INDEXOF E INCLUDES ============ -->
+        <section id="labBusca">
+            <h2>5️⃣ indexOf() e includes() — buscando 🔍</h2>
+            <p>
+                O <strong>indexOf()</strong> responde <strong>ONDE está</strong> (ou -1 se não existe).
+                O <strong>includes()</strong> responde <strong>SE existe</strong> (true/false).
+            </p>
+
+            <div id="buscaVisual" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="text" id="buscaCampo" placeholder="Quem você procura?">
+                <button onclick="labIndexOf()">indexOf()</button>
+                <button onclick="labIncludes()">includes()</button>
+            </div>
+
+            <div id="buscaResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 6: FOREACH ============ -->
+        <section id="labForEach">
+            <h2>6️⃣ forEach() — visitando cada elemento 🚶</h2>
+            <p>
+                O <strong>forEach()</strong> executa uma função <strong>uma vez para cada
+                elemento</strong>, recebendo o elemento e o índice. Ele não cria array novo
+                e não retorna nada — só "visita".
+            </p>
+
+            <div id="forEachVisual" class="arrayBox"></div>
+
+            <div class="controles">
+                <button onclick="labForEachSimples()">forEach: listar com índices</button>
+                <button onclick="labForEachContar()">forEach: contar letras de cada um</button>
+            </div>
+
+            <div id="forEachResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 7: MAP ============ -->
+        <section id="labMap">
+            <h2>7️⃣ map() — transformando tudo 🔄</h2>
+            <p>
+                O <strong>map()</strong> cria um <strong>array NOVO</strong> aplicando uma
+                transformação em cada elemento. O novo array tem SEMPRE o mesmo tamanho
+                do original.
+            </p>
+
+            <p><strong>Array original:</strong></p>
+            <div id="mapVisualOriginal" class="arrayBox"></div>
+
+            <div class="controles">
+                <button onclick="labMapMaiusculas()">map: MAIÚSCULAS</button>
+                <button onclick="labMapMinusculas()">map: minúsculas</button>
+                <button onclick="labMapTamanhos()">map: nº de letras</button>
+                <button onclick="labMapEmoji()">map: adicionar 🦖</button>
+            </div>
+
+            <p><strong>Array novo gerado:</strong></p>
+            <div id="mapVisualNovo" class="arrayBox"></div>
+
+            <div id="mapResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 8: FILTER ============ -->
+        <section id="labFilter">
+            <h2>8️⃣ filter() — só passa quem é aprovado ✅</h2>
+            <p>
+                O <strong>filter()</strong> cria um <strong>array NOVO</strong> apenas com
+                os elementos que passam no teste (retornam <strong>true</strong>).
+            </p>
+
+            <p><strong>Array original:</strong></p>
+            <div id="filterVisualOriginal" class="arrayBox"></div>
+
+            <div class="controles">
+                <input type="text" id="filterCampo" placeholder="Filtrar por texto (ex: saurus)">
+                <button onclick="labFilterTexto()">filter: contém o texto</button>
+                <button onclick="labFilterGrandes()">filter: mais de 10 letras</button>
+            </div>
+
+            <p><strong>Array novo gerado:</strong></p>
+            <div id="filterVisualNovo" class="arrayBox"></div>
+
+            <div id="filterResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 9: REDUCE ============ -->
+        <section id="labReduce">
+            <h2>9️⃣ reduce() — tudo vira UM valor 🧮</h2>
+            <p>
+                O <strong>reduce()</strong> percorre o array acumulando um resultado,
+                e no final devolve <strong>um único valor</strong>. Perfeito pra somas,
+                médias e totais.
+            </p>
+
+            <p><strong>Notas do aluno:</strong></p>
+            <div id="reduceVisualNotas" class="arrayBox"></div>
+
+            <div class="controles">
+                <button onclick="labReduceSoma()">reduce: somar notas</button>
+                <button onclick="labReduceMedia()">reduce: calcular média</button>
+                <button onclick="labReduceLetras()">reduce: total de letras dos dinos</button>
+            </div>
+
+            <div id="reduceResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 10: SORT E REVERSE ============ -->
+        <section id="labOrdem">
+            <h2>🔟 sort() e reverse() — reorganizando 🔀</h2>
+            <p>
+                O <strong>sort()</strong> ordena e o <strong>reverse()</strong> inverte.
+                Os dois <strong>modificam o array original</strong>. Mas cuidado: o sort()
+                tem uma <strong>pegadinha com números</strong>! Teste abaixo. 👇
+            </p>
+
+            <p><strong>Dinossauros:</strong></p>
+            <div id="ordemVisualNomes" class="arrayBox"></div>
+
+            <div class="controles">
+                <button onclick="labSortNomes()">sort() nos nomes</button>
+                <button onclick="labReverseNomes()">reverse() nos nomes</button>
+                <button onclick="resetarOrdem()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <p><strong>Números:</strong></p>
+            <div id="ordemVisualNumeros" class="arrayBox"></div>
+
+            <div class="controles">
+                <button onclick="labSortNumerosErrado()">sort() simples (pegadinha!)</button>
+                <button onclick="labSortNumerosCerto()">sort() numérico correto</button>
+                <button onclick="resetarNumeros()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <div id="ordemResultado" class="painelResultado"></div>
+        </section>
+
+        <!-- ============ LAB 11: QUIZ ============ -->
+        <section id="labQuiz">
+            <h2>🧠 Quiz: qual método usar?</h2>
+            <p>14 perguntas — uma pra cada método! 🏆</p>
+
+            <div class="card">
+                <p id="quizPergunta" class="quizPergunta"></p>
+                <div id="quizOpcoes" class="quizOpcoes"></div>
+            </div>
+
+            <div id="quizResultado" class="painelResultado"></div>
+            <p id="quizPlacar" class="quizPlacar"></p>
+        </section>
+
+        <!-- ============ LAB 12: DESAFIO ============ -->
+        <section id="labDesafio">
+            <h2>🏁 Desafio: transforme o array!</h2>
+            <p>
+                Use os métodos para transformar o <strong>array atual</strong> até ficar
+                <strong>igual ao objetivo</strong>. Menor número de jogadas = melhor! 🎯
+            </p>
+
+            <p><strong>🎯 Objetivo:</strong></p>
+            <div id="desafioAlvo" class="arrayAlvo"></div>
+
+            <p><strong>🦖 Array atual:</strong></p>
+            <div id="desafioAtual" class="arrayBox"></div>
+
+            <div class="controles">
+                <select id="desafioPeca"></select>
+                <button onclick="desafioPush()">push(peça)</button>
+                <button onclick="desafioUnshift()">unshift(peça)</button>
+                <button onclick="desafioPop()">pop()</button>
+                <button onclick="desafioShift()">shift()</button>
+                <button onclick="desafioReverse()">reverse()</button>
+                <button onclick="desafioSort()">sort()</button>
+                <button onclick="reiniciarNivel()" class="btnReset">reiniciar nível 🔄</button>
+            </div>
+
+            <div id="desafioResultado" class="painelResultado"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🦕 Feito por Felipe | SENAI Florianópolis | Estudos de JavaScript</p>
+    </footer>
+
+    <script src="playgrounds.js"></script>
+</body>
+</html>

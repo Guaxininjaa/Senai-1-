@@ -1,0 +1,302 @@
+/* ===== GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0a0e1a;
+    color: #d5dbe8;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #0d1b3e, #050810);
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid #1e90ff;
+}
+
+header h1 {
+    font-size: 42px;
+    color: #1e90ff;
+}
+
+.subtitulo {
+    color: #8fa3c4;
+    font-size: 18px;
+}
+
+/* ===== NAV ===== */
+nav {
+    background-color: #0d1526;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #1a2b4d;
+    z-index: 10;
+}
+
+nav a {
+    color: #8fa3c4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+.navDestaque {
+    background-color: #1e90ff;
+    color: #050810 !important;
+    padding: 5px 14px;
+    border-radius: 15px;
+}
+
+.navDestaque:hover {
+    background-color: #57aaff;
+    color: #050810 !important;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #1e90ff;
+    border-bottom: 2px solid #1a2b4d;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ===== BLOCOS DE CÓDIGO ===== */
+.codigo {
+    background-color: #060a14;
+    border: 1px solid #1a2b4d;
+    border-left: 4px solid #1e90ff;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 12px 0;
+    overflow-x: auto;
+}
+
+.codigo pre {
+    color: #7ee787;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+/* ===== CARDS DE MÉTODOS ===== */
+.grupo {
+    color: #ffb347;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+}
+
+.card {
+    background-color: #0d1526;
+    border: 1px solid #1a2b4d;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #e6ecf5;
+    margin-bottom: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.verde    { background-color: #123d24; color: #7ee787; }
+.vermelho { background-color: #47131a; color: #ff7b72; }
+.azul     { background-color: #0d2a4d; color: #79c0ff; }
+.amarelo  { background-color: #3d3010; color: #f2cc60; }
+.roxo     { background-color: #2d1b4d; color: #d2a8ff; }
+.laranja  { background-color: #45250d; color: #ffa657; }
+
+/* ===== PLAYGROUND DA HOME ===== */
+#arrayVisual {
+    background-color: #060a14;
+    border: 2px dashed #1e90ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 70px;
+}
+
+.elemento {
+    background-color: #0d2a4d;
+    border: 1px solid #1e90ff;
+    color: #79c0ff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+}
+
+.indice {
+    display: block;
+    font-size: 11px;
+    color: #8fa3c4;
+    text-align: center;
+}
+
+.controles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.controles input {
+    background-color: #060a14;
+    border: 1px solid #1a2b4d;
+    color: #d5dbe8;
+    padding: 10px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.controles select {
+    background-color: #060a14;
+    border: 1px solid #1a2b4d;
+    color: #d5dbe8;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.controles button {
+    background-color: #1e90ff;
+    color: #050810;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Consolas, monospace;
+}
+
+.controles button:hover {
+    background-color: #57aaff;
+}
+
+.btnReset {
+    background-color: #ffb347 !important;
+}
+
+#resultado {
+    background-color: #060a14;
+    border: 1px solid #1a2b4d;
+    border-radius: 6px;
+    padding: 15px;
+    min-height: 50px;
+    font-family: Consolas, monospace;
+    color: #7ee787;
+}
+
+/* ===== PLAYGROUNDS EXTRAS ===== */
+.painelResultado {
+    background-color: #060a14;
+    border: 1px solid #1a2b4d;
+    border-radius: 6px;
+    padding: 15px;
+    min-height: 50px;
+    font-family: Consolas, monospace;
+    color: #7ee787;
+    margin-top: 10px;
+}
+
+.arrayBox {
+    background-color: #060a14;
+    border: 2px dashed #1e90ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 60px;
+}
+
+.arrayAlvo {
+    background-color: #060a14;
+    border: 2px dashed #ffb347;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 60px;
+}
+
+.quizPergunta {
+    font-size: 18px;
+    color: #e6ecf5;
+}
+
+.quizOpcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quizOpcoes button {
+    background-color: #0d2a4d;
+    color: #79c0ff;
+    border: 1px solid #1e90ff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Consolas, monospace;
+}
+
+.quizOpcoes button:hover {
+    background-color: #1e90ff;
+    color: #050810;
+}
+
+.quizPlacar {
+    color: #ffb347;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8fa3c4;
+    border-top: 1px solid #1a2b4d;
+}

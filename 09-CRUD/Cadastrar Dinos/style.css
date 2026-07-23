@@ -1,0 +1,16 @@
+.container-inputs {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;    
+    width: 200px;   
+    color: rgb(10, 168, 58);      
+}
+
+
+
+.btn {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px 15px;    
+    cursor: pointer;
+}

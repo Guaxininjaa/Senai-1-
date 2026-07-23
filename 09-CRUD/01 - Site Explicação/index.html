@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoArrays - Aprenda Arrays em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🦖 DinoArrays</h1>
+        <p class="subtitulo">Guia completo de Arrays em JavaScript</p>
+    </header>
+
+    <nav>
+        <a href="playgrounds.html" class="navDestaque">🎮 Playgrounds 🦖</a>
+        <a href="#oque">O que é</a>
+        <a href="#acessar">Acessar</a>
+        <a href="#percorrer">Percorrer</a>
+        <a href="#metodos">Métodos</a>
+        <!-- <a href="#playground">Playground</a> -->
+        
+    </nav>
+
+    <main>
+
+        <!-- ============ O QUE É UM ARRAY ============ -->
+        <section id="oque">
+            <h2>📦 O que é um Array?</h2>
+            <p>
+                Um <strong>array</strong> é uma estrutura de dados que guarda uma
+                <strong>coleção de itens</strong> em uma única variável. Cada item é
+                chamado de <strong>elemento</strong>, e cada elemento tem uma posição
+                chamada <strong>índice</strong>, que começa em <strong>0</strong>.
+            </p>
+            <div class="codigo">
+<pre>const dinossauros = ["T-Rex", "Triceratops", "Velociraptor"];
+//  índice:             0            1               2</pre>
+            </div>
+            <p>Sem array, você precisaria de uma variável para cada valor:</p>
+            <div class="codigo">
+<pre>// Ruim 👎
+const dino1 = "T-Rex";
+const dino2 = "Triceratops";
+const dino3 = "Velociraptor";
+
+// Bom 👍
+const dinossauros = ["T-Rex", "Triceratops", "Velociraptor"];</pre>
+            </div>
+        </section>
+
+        <!-- ============ ACESSAR ELEMENTOS ============ -->
+        <section id="acessar">
+            <h2>🎯 Acessando elementos</h2>
+            <p>Use colchetes com o índice para pegar um elemento:</p>
+            <div class="codigo">
+<pre>console.log(dinossauros[0]); // "T-Rex"
+console.log(dinossauros[2]); // "Velociraptor"
+
+// Descobrir quantos elementos tem:
+console.log(dinossauros.length); // 3
+
+// Pegar o ÚLTIMO elemento (truque útil!):
+console.log(dinossauros[dinossauros.length - 1]);</pre>
+            </div>
+        </section>
+
+        <!-- ============ PERCORRER ============ -->
+        <section id="percorrer">
+            <h2>🔁 Percorrendo um array</h2>
+            <p>Com o <strong>for</strong> que você já conhece:</p>
+            <div class="codigo">
+<pre>for (let i = 0; i < dinossauros.length; i++) {
+    console.log(dinossauros[i]);
+}</pre>
+            </div>
+            <p>Ou com <strong>forEach</strong>, que executa uma função para cada elemento:</p>
+            <div class="codigo">
+<pre>dinossauros.forEach(function(dino) {
+    console.log(dino);
+});</pre>
+            </div>
+        </section>
+
+        <!-- ============ MÉTODOS ============ -->
+        <section id="metodos">
+            <h2>🛠️ Os 14 métodos de array</h2>
+
+            <div class="grupo">➕ Adicionar elementos</div>
+
+            <div class="card">
+                <h3>1. push() <span class="tag verde">adiciona no FINAL</span></h3>
+                <div class="codigo">
+<pre>dinossauros.push("Spinosaurus");
+// ["T-Rex", "Triceratops", "Velociraptor", "Spinosaurus"]</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>2. unshift() <span class="tag verde">adiciona no INÍCIO</span></h3>
+                <div class="codigo">
+<pre>dinossauros.unshift("Stegosaurus");
+// ["Stegosaurus", "T-Rex", "Triceratops", "Velociraptor"]</pre>
+                </div>
+            </div>
+
+            <div class="grupo">➖ Remover elementos</div>
+
+            <div class="card">
+                <h3>3. pop() <span class="tag vermelho">remove o ÚLTIMO</span></h3>
+                <div class="codigo">
+<pre>const removido = dinossauros.pop();
+console.log(removido); // "Velociraptor"
+// ["T-Rex", "Triceratops"]</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>4. shift() <span class="tag vermelho">remove o PRIMEIRO</span></h3>
+                <div class="codigo">
+<pre>const removido = dinossauros.shift();
+console.log(removido); // "T-Rex"
+// ["Triceratops", "Velociraptor"]</pre>
+                </div>
+            </div>
+
+            <div class="grupo">✂️ Cortar e emendar</div>
+
+            <div class="card">
+                <h3>5. splice() <span class="tag azul">remove/adiciona em QUALQUER posição</span></h3>
+                <p>Formato: <strong>splice(posição, quantosRemover, novoItem)</strong></p>
+                <div class="codigo">
+<pre>// Remove 1 elemento na posição 1:
+dinossauros.splice(1, 1);
+// ["T-Rex", "Velociraptor"]
+
+// Substitui o elemento da posição 1:
+dinossauros.splice(1, 1, "Pteranodon");
+// ["T-Rex", "Pteranodon"]</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>6. slice() <span class="tag azul">copia um pedaço (NÃO altera o original)</span></h3>
+                <p>Formato: <strong>slice(início, fim)</strong> — o fim NÃO entra na cópia.</p>
+                <div class="codigo">
+<pre>const copia = dinossauros.slice(0, 2);
+console.log(copia); // ["T-Rex", "Triceratops"]
+// O array original continua igual!</pre>
+                </div>
+            </div>
+
+            <div class="grupo">🔍 Buscar informações</div>
+
+            <div class="card">
+                <h3>7. indexOf() <span class="tag amarelo">EM QUAL POSIÇÃO está?</span></h3>
+                <div class="codigo">
+<pre>console.log(dinossauros.indexOf("Triceratops")); // 1
+console.log(dinossauros.indexOf("Barney"));      // -1 (não existe)</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>8. includes() <span class="tag amarelo">EXISTE ou não? (true/false)</span></h3>
+                <div class="codigo">
+<pre>console.log(dinossauros.includes("T-Rex"));  // true
+console.log(dinossauros.includes("Barney")); // false</pre>
+                </div>
+            </div>
+
+            <div class="grupo">🔄 Reorganizar</div>
+
+            <div class="card">
+                <h3>9. sort() <span class="tag roxo">ordena (A → Z)</span></h3>
+                <div class="codigo">
+<pre>dinossauros.sort();
+// ["T-Rex", "Triceratops", "Velociraptor"] em ordem alfabética</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>10. reverse() <span class="tag roxo">inverte a ordem</span></h3>
+                <div class="codigo">
+<pre>dinossauros.reverse();
+// ["Velociraptor", "Triceratops", "T-Rex"]</pre>
+                </div>
+            </div>
+
+            <div class="grupo">⚡ Métodos avançados (com funções)</div>
+
+            <div class="card">
+                <h3>11. forEach() <span class="tag laranja">executa algo para CADA elemento</span></h3>
+                <div class="codigo">
+<pre>dinossauros.forEach(function(dino, indice) {
+    console.log(indice + ": " + dino);
+});
+// 0: T-Rex
+// 1: Triceratops
+// 2: Velociraptor</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>12. map() <span class="tag laranja">cria um NOVO array transformado</span></h3>
+                <div class="codigo">
+<pre>const maiusculas = dinossauros.map(function(dino) {
+    return dino.toUpperCase();
+});
+// ["T-REX", "TRICERATOPS", "VELOCIRAPTOR"]</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>13. filter() <span class="tag laranja">cria um NOVO array só com quem passa no teste</span></h3>
+                <div class="codigo">
+<pre>const nomesGrandes = dinossauros.filter(function(dino) {
+    return dino.length > 6;
+});
+// ["Triceratops", "Velociraptor"]</pre>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>14. reduce() <span class="tag laranja">reduz tudo a UM único valor</span></h3>
+                <div class="codigo">
+<pre>const notas = [8, 7.5, 9, 6.5];
+const soma = notas.reduce(function(total, nota) {
+    return total + nota;
+}, 0);
+console.log(soma);                // 31
+console.log(soma / notas.length); // 7.75 (média)</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PLAYGROUND ============ -->
+        <section id="playground">
+            <h2>🎮 Playground: teste os métodos ao vivo!</h2>
+            <p>Clique nos botões e veja o array mudar na hora:</p>
+
+            <div id="arrayVisual"></div>
+
+            <div class="controles">
+                <input type="text" id="campoDino" placeholder="Nome do dinossauro...">
+                <button onclick="fazerPush()">push()</button>
+                <button onclick="fazerUnshift()">unshift()</button>
+                <button onclick="fazerPop()">pop()</button>
+                <button onclick="fazerShift()">shift()</button>
+                <button onclick="fazerIndexOf()">indexOf()</button>
+                <button onclick="fazerIncludes()">includes()</button>
+                <button onclick="fazerSort()">sort()</button>
+                <button onclick="fazerReverse()">reverse()</button>
+                <button onclick="resetar()" class="btnReset">resetar 🔄</button>
+            </div>
+
+            <div id="resultado"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🦕 Feito por Felipe | SENAI Florianópolis | Estudos de JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
